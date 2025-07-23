@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+{display: block;}
+
+body {line-height: 1;}
+
+ol, ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+
+table {border-collapse: collapse;border-spacing: 0;}
+
+/*SINTAKS DIATAS DIAMBIL DARI MEYERWEB.*/
+
+/*Sedangkan dibawah ini adalah sintaks buatan kita sendiri. */
+
+/* Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body & Background */
+body {
+  font: 17px/28px Arial, sans-serif;
+  background: url('foto1.jpg') center/cover no-repeat fixed;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  border: 30px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #e3e8e8;
+  border: 3px solid lightcyan;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 100vh; /* Isi layar penuh */
+}
+
+/* Header */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.header img {
+  height: 100px;
+  width: auto;
+  margin-right: 15px;
+}
+.judul {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Konten */
+.content h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: skyblue;
+  text-align: center;
+  margin: 20px 0;
+  margin-top: 50px;
+}
+
+/* Layout Gambar */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-top: 50px;
+}
+.image-row .col {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Gambar */
+.img-small {
+  width: 70%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+.img-large {
+  width: 90%;
+  max-width: 350px;
+  margin-top: 30px; /* Supaya agak turun */
+  border-radius: 8px;
+}
+
+/* Caption */
+.caption-top, .caption-bottom {
+  font-size: 17/28pxpx;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.caption-top {
+  margin-bottom: 8px;
+}
+.caption-bottom {
+  margin-top: 8px;
+}
+
+/* Link Gambar */
+.link-gambar {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: blue;
+  font-size: 14px;
+}
+.link-gambar:hover {
+  text-decoration: underline;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-large {
+    margin-top: 15px;
+  }
+}
